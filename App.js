@@ -179,7 +179,7 @@ const App= () => {
     <View style={styles.container}>
       <StatusBar style="auto"/>
       {/* <ScrollView> */}
-      <View style={{backgroundColor:"#000", width:"90%", minHeight:"45%", marginHorizontal:"10%",marginVertical:18, justifyContent:"center", alignItems:"center"}}>
+      <View style={{backgroundColor:"#000", width:"90%", minHeight:"30%", borderRadius:10, marginHorizontal:"10%",marginVertical:18, justifyContent:"center", alignItems:"center"}}>
         <Image source={require("react-native/Libraries/NewAppScreen/components/logo.png")} style={styles.logo}/>
         <Text style={styles.sectionTitle}>AWESOME</Text>
         <Text style={styles.sectionDescription}>The <Text style={{color:"#555",fontSize: 32,fontWeight: '900', }}>TEXT </Text> component works</Text>
@@ -210,7 +210,7 @@ const styles = StyleSheet.create({
   sectionTitle: {
     fontSize: 32,
     fontWeight: '900',
-    color:"#6f7f6f"
+    color:"#555"
   },
   sectionDescription: {
     marginTop: 8,

@@ -116,7 +116,7 @@ const Card = ({name, address, email, contact, image })=>(
         }}
       /> */}
     </View>
-    {console.log(image)}
+
     <View>
       <Text style={styles.cardTitle}>{name}</Text>
       <Text style={styles.cardDescription}>{address}</Text>
@@ -179,20 +179,17 @@ const App= () => {
     <View style={styles.container}>
       <StatusBar style="auto"/>
       {/* <ScrollView> */}
-      <View style={{backgroundColor:"#000", width:"90%", minHeight:"45%", margin:"10%", justifyContent:"center", alignItems:"center"}}>
+      <View style={{backgroundColor:"#000", width:"90%", minHeight:"45%", marginHorizontal:"10%",marginVertical:18, justifyContent:"center", alignItems:"center"}}>
         <Image source={require("react-native/Libraries/NewAppScreen/components/logo.png")} style={styles.logo}/>
         <Text style={styles.sectionTitle}>AWESOME</Text>
-        <Text style={styles.sectionDescription}>The <Text style={styles.sectionTitle}>TEXT </Text> component works</Text>
+        <Text style={styles.sectionDescription}>The <Text style={{color:"#555",fontSize: 32,fontWeight: '900', }}>TEXT </Text> component works</Text>
         <Text style={styles.boxHighlight}>{text==="Clicked: " ? text : `${text} Clicked: ` }{count}</Text>
       </View>
+  
       <TextInput style={{borderWidth:1, width:"90%", minHeight:"6%", padding:4}} placeholder="Enter Text Here" onChangeText={setText}/>
+  
       <TouchableOpacity onPress={clickHandler} style={styles.button} activeOpacity={0.8}><Text style={styles.highlight}>Press Here</Text></TouchableOpacity>
-      <Image
-        style={styles.profileImage}
-        source={{
-          uri: 'https://images.pexels.com/photos/771742/pexels-photo-771742.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940',
-        }}
-      />
+  
       <View style={styles.cardContainer}>
         <FlatList
           data={personData}
@@ -213,6 +210,7 @@ const styles = StyleSheet.create({
   sectionTitle: {
     fontSize: 32,
     fontWeight: '900',
+    color:"#6f7f6f"
   },
   sectionDescription: {
     marginTop: 8,
@@ -281,15 +279,16 @@ const styles = StyleSheet.create({
     fontWeight: '600',
     color:"#555"
   },
-  // profile:{
-  //   width:"36%",
-  //   height:140,
-  //   margin:6
-  // },
+  profile:{
+    width:"36%",
+    height:140,
+    margin:6
+  },
   profileImage:{
-    width:50,
-    height:50,
-    borderRadius:20,
+    width:120,
+    height:120,
+    borderRadius:5,
+    padding:10
     // resizeMode:"contain",
   }
   
